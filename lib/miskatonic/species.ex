@@ -2,13 +2,15 @@ defmodule Miskatonic.Species do
   @callback client_start_link() ::
               {:ok, pid} | {:error, reason :: term}
 
+  @callback get(id :: String.t) :: term
+
   defmacro __using__([]) do
     quote do
       @behaviour Miskatonic.Species
 
       def get(id), do: Miskatonic.Species.get(__MODULE__, id)
 
-      defoverridable get: 1
+      defoverridable Miskatonic.Species
     end
   end
 
