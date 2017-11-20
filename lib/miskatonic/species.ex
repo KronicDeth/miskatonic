@@ -8,6 +8,7 @@ defmodule Miskatonic.Species do
     quote do
       @behaviour Miskatonic.Species
 
+      @impl Miskatonic.Species
       def get(id), do: Miskatonic.Species.get(__MODULE__, id)
 
       defoverridable Miskatonic.Species
