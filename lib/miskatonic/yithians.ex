@@ -6,7 +6,7 @@ defmodule Miskatonic.Yithians do
   end
 
   def get(id) do
-    case Miskatonic.Species.get(__MODULE__, id) do
+    case super(id) do
       {:error, :not_found} ->
         with {:ok, pid} <- client_start_link(yithian: "Coleopterous") do
           Miskatonic.Client.show(pid, id)

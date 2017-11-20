@@ -7,6 +7,8 @@ defmodule Miskatonic.Species do
       @behaviour Miskatonic.Species
 
       def get(id), do: Miskatonic.Species.get(__MODULE__, id)
+
+      defoverridable get: 1
     end
   end
 
