@@ -4,6 +4,7 @@ use Mix.Config
 
 config :miskatonic, Miskatonic.Clients.Boat, stars_aligned: true
 config :miskatonic, Miskatonic.Clients.Portal, dreaming: true
+config :miskatonic, Miskatonic.Clients.Psychic, killed_by_flying_polyps: false
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
